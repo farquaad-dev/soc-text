@@ -9,7 +9,7 @@
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{10pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{\textbar}\hsp}{0pt}{\Huge\bfseries}
-
+\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
 
 \addbibresource{text.bib}
 
@@ -30,6 +30,8 @@
 \maketitle
 
 \makecopyrightstatement{V Trenčíne}
+
+\newgeometry{margin=2.5cm}
 
 \pagestyle{plain}
 
@@ -55,7 +57,7 @@
 
 \chapter{Schéma zapojenia}
 \begin{center}
-	\includegraphics[width=11cm]{img/schema.pdf}
+	\includegraphics[width=13cm]{img/schema.pdf}
 \end{center}
 
 %\listoffigures
