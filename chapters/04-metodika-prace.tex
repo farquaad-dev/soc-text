@@ -1,5 +1,24 @@
 \chapter{Metodika práce}
 
 \section{Výber komponentov}
+Cieľovú platformu Arduino Uno sme samozrejme museli doplniť ďalšímí komponentmi, ktoré umožňujú realizáciu nášho zadania.
+
+Okrem spomínaného RTC modulu sme pre komunikáciu s používateľom použili 16x2 LCD displej a 4x4 membránovú klávesnicu. Ďalej sme použili piezomenič na vydanie akustického tónu.
+
+\subsection{Zoznam použitých komponentov}
+\begin{itemize}
+    \item Arduino Uno
+    \item RTC modul DS3231
+    \item LCD displej LCD1602
+    \item membránová klávesnica ER-CCO21601C
+    \item piezomenič
+    \item potenciometer \SI{10}{\kilo\ohm}
+    \item rezistor \SI{220}{\ohm}
+\end{itemize}
+
 \section{Návrh zapojenia}
+Celkové zapojenie sme navrhli na základe odporúčaných postupov pre jednotlivé komponenty. Vývody na doske Arduino sme volili tak, aby boli súvisiace komponenty zapojené spolu, no v niektorých prípadoch toto nebolo možné vzhľadom na vlastnosti niektorých vývodov (napr. PWM).
+
+Pre realizáciu obvodu sme dočasne využili nepájivé pole. Do budúcnosti je plánované umiestniť hotový výrobok do krabičky.
+
 \section{Implementácia}
