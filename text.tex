@@ -3,6 +3,7 @@
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{enumitem}
+\usepackage{geometry}
 
 \addbibresource{text.bib}
 
@@ -42,6 +43,14 @@
 
 \printbibliography[title=Zoznam použitej literatúry]
 \addcontentsline{toc}{chapter}{Zoznam použitej literatúry}
+
+\appendix
+\newgeometry{margin=1cm}
+
+\chapter{Schéma zapojenia}
+\begin{center}
+	\includegraphics[width=11cm]{img/schema.pdf}
+\end{center}
 
 %\listoffigures
 %\addcontentsline{toc}{section}{Seznam obrázků}
