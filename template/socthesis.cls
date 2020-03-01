@@ -1,9 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{template/socthesis}[2017/01/15 Document class for czech SOC theses]
+\ProvidesClass{template/socthesis}[2017/01/15 Document class for slovak SOC theses]
 \LoadClass[12pt, a4paper, oneside]{book}
 
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[czech]{babel}
+\RequirePackage[slovak]{babel}
 \RequirePackage{graphicx}
 \RequirePackage{tabularx}
 \RequirePackage{array}
@@ -34,8 +34,8 @@
 
 %% hyperref \autoref nazvy
 \def\sectionautorefname{Kapitola}
-\def\figureautorefname{Obrázek}
-\def\tableautorefname{Tabulka}
+\def\figureautorefname{Obrázok}
+\def\tableautorefname{Tabuľka}
 
 
 %%%%%% PROMĚNNÉ
@@ -61,7 +61,7 @@
     {8}{\def\@field{8. Ochrana a~tvorba životního prostředí}}
     {9}{\def\@field{9. Strojírenství, hutnictví, doprava a~průmyslový design}}
     {10}{\def\@field{10. Elektrotechnika, elektronika a~telekomunikace}}
-    {11}{\def\@field{11. Stavebnictví, architektura a~design interiérů}}
+    {11}{\def\@field{11. Informatika}}
     {12}{\def\@field{12. Tvorba učebních pomůcek, didaktická technologie}}
     {13}{\def\@field{13. Ekonomika a~řízení}}
     {14}{\def\@field{14. Pedagogika, psychologie, sociologie a~problematika volného času}}
@@ -84,17 +84,22 @@
 	\voffset = -20mm % posun začátku textu výš
     \enlargethispage{40mm} % zvětší oblast tisku pro tuto stránku
 	\begin{center}
-	    {\large \B{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}} \\
-	    \vspace{5mm}
-		\normalsize \B{Obor: \@field} \\
+		{\large \B{Gymnázium Ľudovíta Štúra Trenčín}} \\
+		{\large 1. mája 2, 911 35 Trenčín}\\
+		\vspace{60mm}
 
-		\vspace{40mm}
+		{\Large \B{STREDOŠKOLSKÁ ODBORNÁ ČINNOSŤ}} \\
+		\vspace{15mm}
+		\large \B{Odbor: \@field} \\
+		\vspace{5mm}
 
 		{\LARGE \B{\@titlecz}} \\
 
 		\vfill
 
-        	{\Large \B{\@author}} \\
+		{\Large \B{\@author}} \\
+		\vspace{3mm}
+		{\large Ročník štúdia: tretí}
 
 		\vspace{20mm}
 
@@ -105,13 +110,16 @@
 	\pagestyle{empty}
     \enlargethispage{40mm} % zvětší oblast tisku pro tuto stránku
 	\begin{center}
-	    {\large \B{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}} \\
+	    {\large \B{Gymnázium Ľudovíta Štúra Trenčín}} \\
+		{\large 1. mája 2, 911 35 Trenčín}\\
+		\vspace{60mm}
 
-		\vspace{40mm}
+		{\Large \B{STREDOŠKOLSKÁ ODBORNÁ ČINNOSŤ}} \\
+		\vspace{15mm}
+		\large \B{Odbor: \@field} \\
+		\vspace{5mm}
 
-		{\Large \B{\expandafter\MakeUppercase\expandafter{\@titlecz}}} \\
-		\vspace{20mm}
-		{\large \B{\expandafter\MakeUppercase\expandafter{\@titleen}}} \\
+		{\LARGE \B{\@titlecz}} \\
 
 		\vfill
 
@@ -120,11 +128,10 @@
         \renewcommand{\arraystretch}{1.5}
         \linespread{1.0}
 		\begin{tabularx}{\textwidth}{r >{\raggedright}p{90mm} c}
-		\large \B{AUTOR} & \large \B{\@author} & \\
-		\large \B{ŠKOLA} & \large \B{\@school} & \\
-		\large \B{KRAJ} & \large \B{\@region} & \\
-		\large \B{ŠKOLITEL} & \large \B{\@mentor} & \\
-		\large \B{OBOR} & \large \B{\@field} & \\
+		\large \B{AUTORI} & \large \B{\@author} & \\
+		\large \B{ROČNÍK ŠTÚDIA} & \large \B{tretí} & \\
+		%\large \B{ŠKOLITEL} & \large \B{\@mentor} & \\
+		\large \B{ZRIAĎOVATEĽ} & \large \B{\@region} & \\
 		\end{tabularx}
 		\setlength{\tabcolsep}{6pt}
         \renewcommand{\arraystretch}{1.0}
@@ -146,20 +153,29 @@
 	~
 	\vfill
 
-	\section*{Prohlášení}
-	Prohlašuji, že svou práci na téma \It{\@titlecz} jsem vypracoval/a samostatně pod vedením {\@mentorstatement} a~s~použitím odborné literatury a~dalších informačních zdrojů, které jsou všechny citovány v~práci a~uvedeny v~seznamu literatury na~konci práce.
+	\section*{Prehlásenie}
+	Vyhlasujeme, že prácu stredoškolskej odbornej činnosti na tému \It{\@titlecz} sme vypracovali samostatne, s použitím uvedených literárnych zdrojov.
 
-	Dále prohlašuji, že tištěná i~elektronická verze práce SOČ jsou shodné a~nemám závažný důvod proti zpřístupňování této práce v~souladu se~zákonem č.~121/2000~Sb., o~právu autorském, o~právech souvisejících s~právem autorským a~změně některých zákonů (autorský zákon) v~platném změní.
+	Prácu sme neprihlásili a ani neprezentovali v žiadnej inej súťaži, ktorá je pod gestorstvom MŠMVVaŠ SR. Sme si vedomí dôsledkov, ak uvedené údaje nie sú pravdivé.
 
 	\vspace{10mm}
 
 	\noindent \parbox{\textwidth}{
-		\noindent {#1} dne: \rule{4cm}{1pt}
+		\noindent {#1} dňa: \rule{4cm}{1pt}
 		\hfill\parbox{5cm}{
     		\centering
     		\vspace{9mm}
     		\rule{5cm}{1pt}\\
-        	\@author
+        	{Kristína Rybárová}
+		}
+	}\\
+	\vspace{10mm}\\
+	\noindent \parbox{\textwidth}{
+		\hfill\parbox{5cm}{
+    		\centering
+    		\vspace{9mm}
+    		\rule{5cm}{1pt}\\
+        	{Matej Hrachovec}
 		}
 	}
 
@@ -188,7 +204,3 @@
 	\newpage
 	\pagestyle{plain}
 }
-
-
-
-
