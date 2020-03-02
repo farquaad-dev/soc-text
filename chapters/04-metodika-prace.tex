@@ -22,3 +22,8 @@ Celkové zapojenie sme navrhli na základe odporúčaných postupov pre jednotli
 Pre realizáciu obvodu sme dočasne využili nepájivé pole. Do budúcnosti je plánované umiestniť hotový výrobok do krabičky.
 
 \section{Implementácia}
+Pri programovaní sme použili programovací jazyk C++ a vhodné knižice pre prácu so zvolenými komponentmi.
+
+Po spustení sa inicializuje RTC, pričom ak sa jedná o prvé spustenie po programovaní, tak sa čas kompilácie nastaví ako inicializačný čas, čím odpadá potreba ručne nastavovať čas. Taktiež prebehne inicializácia iných komponentov.
+
+Následne sa v hlavnom cykle programu pravidelne zisťuje aktuálny čas z modulu RTC a porovnáva s časom budenia.
